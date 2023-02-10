@@ -58,7 +58,6 @@ const Signup = () => {
                     <input type='password' onChange={changeHandler} value={form.password} name='password' placeholder='Enter Password' />
                     <div>
                         <button type='submit'>SignUp</button>
-                        <button onClick={goToLogin} >Login</button>
                     </div>
                 </form>
                 <i onClick={closeModal} id='closeModal' className="fa-solid fa-xmark"></i>

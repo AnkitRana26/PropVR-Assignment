@@ -16,7 +16,7 @@ app.use('/movies',movieRouter);
 app.use('/users',userRouter);
 
 app.use('/',(req,res)=>{
-    req.send('Api Working');
+    req.send('Api Working');x
 })
 
 

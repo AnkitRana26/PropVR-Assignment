@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Login from '../../pages/Login/Login';
 import Signup from '../../pages/Signup/Signup';
-import { setLogin } from '../../Redux/Action';
+import { setAuth, setLogin } from '../../Redux/Action';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Navbar.css'
@@ -14,8 +14,13 @@ const Navbar = () => {
         if (!isLogin) {
             setLogin(true, dispatch);
         }
-
     }
+
+    const logoutHandler =()=>{
+        setAuth({isLogin:false,details:null},dispatch);
+    }
+
+
     return (
         <>
             <nav id='navbar'>
@@ -30,7 +35,16 @@ const Navbar = () => {
                                 <i className="fa-solid fa-user"></i>
                             </div>
                             <p>{auth.details.name}</p>
-                        </div> : <button className='iconButton' onClick={loginHandler}><i className="fa-solid fa-arrow-right-to-bracket"></i><span>Login</span></button>
+                            <button>
+                                <i onClick={logoutHandler} class="fa-solid fa-right-from-bracket"></i>
+                            </button>
+                        </div> : <div id='userInfo'>
+                            <button className='iconButton' onClick={loginHandler}>
+                                <i className="fa-solid fa-arrow-right-to-bracket"></i>
+                                <span>Login</span>
+                            </button>
+                            
+                        </div>
                     }
                 </div>
             </nav>
