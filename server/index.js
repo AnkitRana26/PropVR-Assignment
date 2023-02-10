@@ -15,6 +15,11 @@ app.use(express.json());
 app.use('/movies',movieRouter);
 app.use('/users',userRouter);
 
+app.use('/',(req,res)=>{
+    req.send('Api Working');
+})
+
+
 connect().then(res=>{
     app.listen(env.PORT, () => {
         console.log('Server Started');
