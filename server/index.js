@@ -4,6 +4,10 @@ const cors = require('cors');
 const movieRouter = require('./routes/movies.routes');
 const userRouter = require('./routes/user.routes');
 
+require('dotenv').config();
+const env = process.env;
+
+
 const app = express();
 
 app.use(cors());
@@ -12,7 +16,7 @@ app.use('/movies',movieRouter);
 app.use('/users',userRouter);
 
 connect().then(res=>{
-    app.listen(8080, () => {
+    app.listen(env.PORT, () => {
         console.log('Server Started');
     })
     

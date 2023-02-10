@@ -74,3 +74,13 @@
     right: 5%;
 }
 
+@media screen and (max-width:800px) {
+    #loginContainer{
+        width: 75%;
+    }
+}
+@media screen and (max-width:500px) {
+    #loginContainer{
+        width: 95%;
+    }
+}

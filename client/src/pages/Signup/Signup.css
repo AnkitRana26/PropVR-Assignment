@@ -74,3 +74,15 @@
     right: 5%;
 }
 
+
+@media screen and (max-width:800px) {
+    #signupContainer{
+        width: 75%;
+    }
+}
+@media screen and (max-width:500px) {
+    #signupContainer{
+        width: 95%;
+    }
+}
+
