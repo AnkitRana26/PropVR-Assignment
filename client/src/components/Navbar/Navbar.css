@@ -1,0 +1,67 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    /* border: 1px solid black; */
+    color: white;
+    position: sticky;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    margin-bottom: 1%;
+    top: 0px;
+    z-index: 100001;
+    background-color: transparent;
+}
+
+#navbar>div {
+    display: flex;
+    width: 10%;
+    gap: 20px;
+}
+
+#navbar>h1 {
+    font-size: 2rem;
+}
+
+#navbar>div>button {
+    padding: 0% 0%;
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s linear;
+    border-radius: 3px;
+    /* border: 1px solid white; */
+}
+
+.toaster{
+    z-index: 1000003 !important;
+}
+
+#userContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 8px;
+    cursor: pointer;
+}
+#userContainer > div{
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.iconButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
